@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PM2E10605.Views.PageInicial"
+             BackgroundColor="PaleVioletRed">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Button">
+                <Setter Property="Margin" Value="0,20,0,0" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="24">
+                <Label Text="APP Examen I Parcial/SITE VISITOR APP" FontSize="24" HorizontalOptions="Center" BackgroundColor="Black"/>
+                <Image x:Name="Foto" WidthRequest="100" HeightRequest="200"/>
+
+                <Button x:Name="Btnfoto" Text="Tomar Foto" Clicked="Btnfoto_Clicked" HorizontalOptions="Center" Margin="0,10,0,0" BackgroundColor="Red"/>
+
+                <Label Text="Calcular la Latitud" Margin="0,10,0,0"/>
+                <Entry x:Name="Latitud" Placeholder="Latitud" IsEnabled="False" Margin="0,0,0,10"/>
+
+                <Label Text="Calcular la Longitud" Margin="0,10,0,0"/>
+                <Entry x:Name="Longitud" Placeholder="Longitud" IsEnabled="False" Margin="0,0,0,10"/>
+
+                <Label Text="Añada una Descripción" Margin="0,10,0,0"/>
+                <Entry x:Name="Descripcion" Placeholder="Descripción" MaxLength="50" HeightRequest="100" Keyboard="Text" Margin="0,0,0,10"/>
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    
+                    <StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="End">
+                        <StackLayout Orientation="Horizontal" Margin="0,-20,0,-20">
+                            <Button x:Name="Btnguardar" Text="Agregar" Clicked="Btnguardar_Clicked" Padding="0,0,0,0" BackgroundColor="Green"/>
+                            <Button x:Name="Btnlista" Text="Lista Sitios" Clicked="Btnlista_Clicked" Padding="0,0,0,0" BackgroundColor="Orange"/>
+                        </StackLayout>
+                        <Button x:Name="Btnsalir" Text="Salir App" Clicked="Btnsalir_Clicked" Padding="0,0,0,0" WidthRequest="100" HorizontalOptions="Center" BackgroundColor="Aquamarine"/>
+                    </StackLayout>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+
+</ContentPage>
